@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/rendering.dart';
 
 const int largeScreenSize = 1366;
 const int mediumScreenSize = 768;
@@ -37,10 +36,10 @@ class ResponsiveWidget extends StatelessWidget {
         return largeScreen;
       }
       else if(_width < largeScreenSize && _width >= mediumScreenSize){
-        return mediumScreen ?? largeScreen;
+        return mediumScreen;
       }
       else{
-        return smallScreen ?? largeScreen;
+        return smallScreen;
       }
     });
   }
